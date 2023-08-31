@@ -15,7 +15,6 @@ class MainActivity : DaggerAppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        findViewById<TextView>(R.id.name).text = car.name
+//        findViewById<TextView>(R.id.name).text = car.name
     }
 }

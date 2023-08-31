@@ -14,5 +14,7 @@ import dagger.android.support.AndroidSupportInjectionModule
 ])
 interface AppComponent: AndroidInjector<BaseApplication> {
     @Component.Builder
-    abstract class Builder: AndroidInjector.Builder<BaseApplication>() {}
+    abstract class Builder: AndroidInjector.Builder<BaseApplication>() {
+        abstract override fun build(): AppComponent
+    }
 }

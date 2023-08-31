@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
+    id 'kotlin-android'
 
 }
 
@@ -32,6 +33,10 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
+    buildFeatures {
+        dataBinding true
+    }
 }
 
 dependencies {
@@ -55,4 +60,14 @@ dependencies {
     implementation "com.google.dagger:dagger-android:$daggerVersion"
     implementation "com.google.dagger:dagger-android-support:$daggerVersion"
     kapt "com.google.dagger:dagger-android-processor:$daggerVersion"
+
+
+    /*
+    * Navigation component
+    * URL : https://developer.android.com/guide/navigation/get-started
+    * */
+    //noinspection GradleDependency
+    implementation "androidx.navigation:navigation-fragment-ktx:$navVersion"
+    //noinspection GradleDependency
+    implementation "androidx.navigation:navigation-ui-ktx:$navVersion"
 }

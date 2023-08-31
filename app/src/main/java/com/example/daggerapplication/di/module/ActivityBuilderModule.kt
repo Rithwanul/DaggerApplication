@@ -9,7 +9,8 @@ import dagger.android.ContributesAndroidInjector
 abstract class ActivityBuilderModule {
 
     @ContributesAndroidInjector(modules = [
-        CarModule::class
+        CarModule::class,
+        NavHostModule::class
     ])
     abstract fun contributeMainActivity(): MainActivity
 }
